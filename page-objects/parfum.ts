@@ -24,8 +24,6 @@ export class ParfumPage extends BasePage{
   }
 
   setProduct = async (productName: any) => {
-    // need some time before switch to new select
-    await this.page.waitForTimeout(500);
     if(productName){
       await this.productSelect.click()
       await this.filterSearch.pressSequentially(productName);
@@ -37,8 +35,6 @@ export class ParfumPage extends BasePage{
   }
 
   setBrand = async (brandName: any) => {
-     // need some time before switch to new select
-    await this.page.waitForTimeout(500);
     if(brandName){
       await this.brandSelect.click();
       await this.filterSearch.pressSequentially(brandName);
@@ -50,8 +46,6 @@ export class ParfumPage extends BasePage{
   }
 
   setForWhom = async (forWhom: any) => {
-     // need some time before switch to new select
-    await this.page.waitForTimeout(500);
     if(forWhom){
       await this.forWhomSelect.click();
       await this.checkboxBase.locator(`//div[text()='${forWhom}']`).click()
@@ -62,8 +56,6 @@ export class ParfumPage extends BasePage{
   }
 
   setPresentFor = async (presentFor: any) => {
-     // need some time before switch to new select
-    await this.page.waitForTimeout(500);
     if(presentFor){
       await this.presentForSelect.click();
       await this.filterSearch.pressSequentially(presentFor);
